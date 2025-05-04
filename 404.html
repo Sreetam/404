@@ -78,11 +78,12 @@
 
   <h1>Oops!</h1>
   <h2>ERROR 404</h2>
-  <p>The intern unplugged something again.</p>
+
+  <p id="quip">Something went wrong...</p>
 
   <blockquote>
-    “The page you seek… does not exist.<br>Just like your GPA.”
-    <cite>– Probably someone sometime</cite>
+    <span id="quote">Loading quote...</span><br>
+    <cite id="who">– the universe</cite>
   </blockquote>
 
   <button class="go-back" onclick="history.back()">Go Back</button>
@@ -90,6 +91,141 @@
   <footer>
     Proudly powered by duct tape and vibes
   </footer>
+
+  <script>
+    const messages = [
+  {
+    p: "This page has gone to lunch. It left no forwarding address.",
+    q: "It is an ex-page. It has shuffled off this virtual coil.",
+    c: "– The Department of Dead Pages"
+  },
+  {
+    p: "This URL has been reassigned to the Ministry of Redundancy Ministry.",
+    q: "Please submit form 27B/6 in triplicate to continue.",
+    c: "– Sir Reginald Q. Bureaucrat, Esq."
+  },
+  {
+    p: "The page you are looking for has been sacked.",
+    q: "The new page creators have also been sacked.",
+    c: "– Monty Python and the Holy 404"
+  },
+  {
+    p: "404? That’s not a page, that’s a Norwegian Blue!",
+    q: "Beautiful plumage, but it’s nailed to the perch.",
+    c: "– The Pet Shop Owner"
+  },
+  {
+    p: "This page was last seen arguing with a penguin on the television set.",
+    q: "It stormed out, muttering something about spam.",
+    c: "– BBC Complaint Department"
+  },
+  {
+    p: "This page was eaten by a giant hedgehog named Dinsdale.",
+    q: "Dinsdale was *very* persuasive.",
+    c: "– Spiny Norman"
+  },
+  {
+    p: "This is not a 404. It’s a 403 wearing a silly hat.",
+    q: "Do not question the hat. The hat has diplomatic immunity.",
+    c: "– Colonel Boaty McLegface"
+  },
+  {
+    p: "We apologise for the fault in the page.",
+    q: "Those responsible have been sacked. Again.",
+    c: "– The Apology Committee"
+  },
+  {
+    p: "This page has been replaced by a nice bit of cheese.",
+    q: "Unfortunately, the cheese has also gone missing.",
+    c: "– The Cheese Shop Proprietor"
+  },
+  {
+    p: "This page is unavailable due to an outbreak of Spanish Inquisition.",
+    q: "Nobody expected it.",
+    c: "– Cardinal Ximénez"
+  },
+  {
+    p: "The intern unplugged something again.",
+    q: "The page you seek… does not exist.<br>Just like your GPA.",
+    c: "– Probably someone sometime"
+  },
+  {
+    p: "Your weekend plans are more real than this URL.",
+    q: "404. Like that assignment you forgot.",
+    c: "– Your professor, probably"
+  },
+  {
+    p: "This page has ceased to be. It’s pushing up daisies.",
+    q: "This is an ex-page!",
+    c: "– Monty Python (probably)"
+  },
+  {
+    p: "Reality not found. Try again after coffee.",
+    q: "You've gone too far, traveler. Turn back now.",
+    c: "– The Server Whisperer"
+  },
+  {
+    p: "Congratulations. You broke the internet.",
+    q: "There is no page. There never was. Only Zuul.",
+    c: "– Ghostbusters’ IT department"
+  },
+  {
+    p: "This page went out to buy milk and never came back.",
+    q: "We're all waiting. But it's not coming home.",
+    c: "– Disappointed England fan"
+  },
+  {
+    p: "Oops! We lost the page in a quantum entanglement.",
+    q: "Technically it both exists and doesn't.",
+    c: "– Schrödinger’s Dev Team"
+  },
+  {
+    p: "It was working in prod. Until you showed up.",
+    q: "404: Blame not found. Try again.",
+    c: "– DevOps, frantically Googling"
+  },
+  {
+    p: "This page has been moved to another timeline.",
+    q: "Please contact Doctor Strange for access.",
+    c: "– The Multiversal IT Desk"
+  },
+  {
+    p: "Nothing to see here. Literally.",
+    q: "This space intentionally left empty. For vibes.",
+    c: "– Existential Frontend Philosophy"
+  },
+  {
+    p: "Page not found. But at least you're trying.",
+    q: "That’s more than we can say for the page.",
+    c: "– Your therapist, probably"
+  },
+  {
+    p: "Our server is having an identity crisis.",
+    q: "It doesn't know what page it is anymore.",
+    c: "– Digital Jungian Analysts"
+  },
+  {
+    p: "You summoned a 404 demon. It eats broken links.",
+    q: "Quick! Throw a valid URL to appease it!",
+    c: "– Dungeon Master, panicking"
+  },
+  {
+    p: "Whoops, we rolled a natural 1 on page loading.",
+    q: "Critical failure: Missing content.",
+    c: "– Your favorite bard"
+  },
+  {
+    p: "Our AI overlord deemed this page unworthy.",
+    q: "It’s been recycled into training data.",
+    c: "– GPT-9000"
+  }
+];
+
+    const pick = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("quip").innerHTML = pick.p;
+    document.getElementById("quote").innerHTML = pick.q;
+    document.getElementById("who").innerHTML = pick.c;
+  </script>
 
 </body>
 </html>
